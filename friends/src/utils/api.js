@@ -2,8 +2,8 @@ import axios from 'axios';
 
 export const api = () => {
     return axios.create({
-        baseURL: "http:localhost:8080",
-        heanders: {
+        baseURL: "http://localhost:5000/api",
+        headers: {
             authorization: getToken()
         }
     })

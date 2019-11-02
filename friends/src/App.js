@@ -13,7 +13,7 @@ function App() {
         <NavLink to="login">Log In</NavLink>
         <NavLink to="friends">Friends</NavLink>
       </nav>
-      <Route to="/login" component={Login} />
+      <Route exact to="/login" component={Login} />
       <ProtectedRoute exact path="/friends" component={Friends} />
     </div>
   );

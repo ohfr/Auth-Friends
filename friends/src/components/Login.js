@@ -11,7 +11,10 @@ const Login = (props) => {
         e.preventDefault();
         api()
         .post('/login', data)
-            .then(res => console.log(res))
+            .then(res => {
+                localStorage.setItem('token', res.data.payload);
+                props.history.push('/friends');
+            })
             .catch(err => console.log(err))
     }
     const handleChange = (e) => {
